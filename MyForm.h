@@ -10,7 +10,7 @@ namespace web {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm
+	/// Description rÃ©sumÃ©e de MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -25,7 +25,7 @@ namespace web {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisÃ©es.
 		/// </summary>
 		~MyForm()
 		{
@@ -44,14 +44,14 @@ namespace web {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nÃ©cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// MÃ©thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mÃ©thode avec l'Ã©diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -139,6 +139,13 @@ namespace web {
 	}
 	private: System::Void axCommandButton2_Enter(System::Object^ sender, System::EventArgs^ e) {
 		webBrowser->GoForward();
+	}
+		private: System::Void axCommandButton1_Enter(System::Object^ sender, System::EventArgs^ e) 
+	{
+		webBrowser->GoBack();
+	}
+	private: System::Void axCommandButton3_Enter(System::Object^ sender, System::EventArgs^ e) {
+		webBrowser->Navigate(axTextBox1->Text);
 	}
 };
 }
